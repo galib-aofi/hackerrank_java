@@ -1,0 +1,25 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+     
+Scanner sc = new Scanner(System.in);
+
+String a = sc.next();
+String b = sc.next();
+
+int lengthOfA = a.length();
+int lengthOfB = b.length();
+
+System.out.println(lengthOfA + lengthOfB); 
+
+if(a.compareTo(b)>0){
+  System.out.println("Yes");  
+}
+else{
+  System.out.println("No");
+}
+System.out.println(Character.toUpperCase(a.charAt(0)) + a.substring(1) + " " + Character.toUpperCase(b.charAt(0)) + b.substring(1) );
+     
+  }
+}
