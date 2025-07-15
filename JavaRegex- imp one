@@ -1,0 +1,21 @@
+package org.problemsolving;
+
+import java.util.Scanner;
+
+public class JavaRegex {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        while (in.hasNext()) {
+            String IP = in.next();
+            System.out.println(IP.matches(new MyRegex().pattern));
+        }
+    }
+}
+
+class MyRegex {
+    // This regex matches numbers from 0 to 255
+    String ipPart = "(\\d{1,2}|(0|1)\\d{2}|2[0-4]\\d|25[0-5])";
+
+    // Combine 4 parts with literal dots (escaped as \\.)
+    String pattern = ipPart + "\\." + ipPart + "\\." + ipPart + "\\." + ipPart;
+}
